@@ -65,6 +65,8 @@
         "functional": "cpp",
         "iterator": "cpp",
         "utility": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "deque": "cpp",
+        "stack": "cpp"
     }
 }
