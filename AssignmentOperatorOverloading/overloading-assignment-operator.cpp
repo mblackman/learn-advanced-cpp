@@ -37,7 +37,7 @@ public:
     }
 };
 
-int main() {
+int main1() {
 
     Test test1(10, "Mike");
     test1.print();
