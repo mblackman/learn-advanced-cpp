@@ -8,12 +8,15 @@
                 "-fcolor-diagnostics",
                 "-fansi-escape-codes",
                 "-g",
-                "${file}",
+                "${fileDirname}/*.cpp",
                 "-o",
-                "${workspaceFolder}/out/${fileBasenameNoExtension}"
+                "${workspaceFolder}/out/${fileBasenameNoExtension}" 
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${workspaceFolder}",
+                "shell": {
+                    "executable": "/bin/bash" // Or your preferred shell 
+                }
             },
             "problemMatcher": [
                 "$gcc"
