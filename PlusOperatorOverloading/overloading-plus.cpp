@@ -1,42 +1,19 @@
 #include <iostream>
+#include "Complex.h"
 using namespace std;
-
-class Test {
-private:
-    int id;
-    string name;
-
-public:
-    Test() : id(0), name("") {
-
-    }
-
-    Test(int id, string name) : id(id), name(name) {
-
-    }
-
-    Test(const Test &other) {
-        *this = other;
-    }
-
-    const Test &operator=(const Test& other) {
-        id = other.id;
-        name = other.name;
-        return *this;
-    }
-
-    friend ostream &operator<<(ostream &out, const Test &test) {
-        out << test.id << ": " << test.name;
-        return out;
-    }
-};
+using namespace testproject;
 
 int main() {
+    Complex c1(2, 4);
+    Complex c2(8,  6);
 
-    Test test1(10, "Mike");
-    Test test2(30, "Bob");
+    Complex c3 = c1 + c2;
 
-    cout << test1 << ", " << test2 << endl;
+    cout << c3 << endl;
 
+    cout << c1 + 5 << endl;
+
+    cout << 3.3 + c2 << endl;
+    
     return 0;
 }
