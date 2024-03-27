@@ -2,21 +2,6 @@
 using namespace std;
 
 template<class T>
-class Test {
-private:
-    T object;
-
-public:
-    Test(T object) : object(object) {
-
-    }
-
-    void print() {
-        cout << object << endl;
-    }
-};
-
-template<class T>
 void print(T n) {
     cout << "Generic method called: " << n << endl;
 }
