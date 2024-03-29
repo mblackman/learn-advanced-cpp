@@ -1,8 +1,11 @@
+#ifndef RING_H_
+#define RING_H_
+
 #include <iostream>
 #include <vector>
 using namespace std;
 
-template <class T>
+template <typename T>
 class ring {
 private: 
     vector<T> values;
@@ -10,6 +13,8 @@ private:
     int index;
 
 public:
+    class iterator;
+
     ring(int size): values(size), maxSize(size), index(0) {
 
     }
@@ -34,3 +39,13 @@ public:
         return values.size();
     }
 };
+
+template <typename T>
+class ring<T>::iterator {
+public:
+    void print() {
+        cout << "Hello from iterator" << endl;
+    }
+};
+
+#endif

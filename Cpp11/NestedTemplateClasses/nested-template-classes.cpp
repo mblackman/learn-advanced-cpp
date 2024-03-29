@@ -4,6 +4,7 @@ using namespace std;
 
 int main() {
 
+    // Basic OOP approach.
     ring<string> textRing(3);
 
     textRing.add("one");
@@ -15,5 +16,10 @@ int main() {
         cout << textRing.get(i) << endl;
     }
 
+    // Custom iterator
+    ring<string>::iterator it;
+
+    it.print();
+    
     return 0;
 }
