@@ -2,6 +2,7 @@
 #define RING_H_
 
 #include <iostream>
+#include <initializer_list>
 using namespace std;
 
 template <typename T>
@@ -16,6 +17,15 @@ public:
 
     ring(int size): m_values(NULL), m_size(size), m_index(0) {
         m_values = new T[size];
+    }
+
+    ring(initializer_list<T> items): m_values(NULL), m_size(items.size()), m_index(0) {
+        m_values = new T[m_size];
+        int index = 0;
+
+        for (auto value: items) {
+            m_values[index++] = value;
+        }
     }
 
     ~ring() {

@@ -16,5 +16,19 @@ int main() {
         cout << text << endl;
     }
 
+    // Create using list initializer
+    ring<string> initRing {"Apple", "Orange", "Banana", "Corn"};
+
+    for (string text: initRing) {
+        cout << text << endl;
+    }
+
+    initRing.add("Something else");
+    initRing.add("Another one");
+
+    for (string text: initRing) {
+        cout << text << endl;
+    }
+
     return 0;
 }
