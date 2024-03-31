@@ -70,6 +70,9 @@
         "stack": "cpp",
         "list": "cpp",
         "map": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "__tree": "cpp",
+        "iomanip": "cpp",
+        "queue": "cpp"
     }
 }
